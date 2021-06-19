@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -92,8 +94,10 @@
     ]
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "eslint --cache --fix",
+    "src/**/*.{js,jsx}": [
+      "eslint --cache --fix"
+    ],
+    "src/**/*.{js,jsx,json,css,json,md}": [
       "prettier --write"
     ]
   }
